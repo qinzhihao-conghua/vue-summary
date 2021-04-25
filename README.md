@@ -19,6 +19,4 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+动态路由的作用是：不同路由使用同一组件，但是可以根据动态path（参数）决定展示内容

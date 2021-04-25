@@ -1,10 +1,14 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <header>
+      <div>vue2.x知识点总结</div>
+      <ul class="nav">
+        <li class="nav-item">
+          <router-link class="router-link" to="/base">基础</router-link>
+        </li>
+      </ul>
+    </header>
+    <router-view />
   </div>
 </template>
 
@@ -13,20 +17,31 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  color: #000;
+  height: 100%;
+  header {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    background-color: #3a58fc;
+    color: #fff;
+    padding: 0 24px;
+    .nav {
+      margin-left: 56px;
+      height: 100%;
+      .nav-item {
+        height: 100%;
+      }
     }
   }
+}
+.router-link {
+  height: 100%;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+}
+.router-link-active {
+  border-bottom: 4px solid #ffeb3b;
 }
 </style>
