@@ -37,7 +37,6 @@ export default {
   .area-left {
     flex: 3;
     max-width: 350px;
-    margin-right: 24px;
     border-right: 1px solid #ddd;
     .left-nav {
       display: flex;
@@ -52,6 +51,7 @@ export default {
   }
   .area-right {
     flex: 7;
+    padding: 24px;
   }
 }
 </style>

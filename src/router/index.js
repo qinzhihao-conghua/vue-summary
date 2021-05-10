@@ -6,25 +6,26 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/base',
-    name: 'Base',
-    component: () => import('../views/base/Base.vue'),
+    // 默认路由不需要name属性，会有警告
+    // name: 'Base',
+    component: () => import('../views/Base/Base.vue'),
     children: [
       {
         path: 'comment-doc',
         name: 'CommentDoc',
-        component: () => import('../views/comment-doc/CommentDoc.vue'),
+        component: () => import('../views/Comment-Doc/CommentDoc.vue'),
       },
       {
         path: 'communication',
         name: 'Communication',
-        component: () => import('../views/communication/Communication.vue'),
+        component: () => import('../views/Communication/Communication.vue'),
       },
       {
         path: 'router-example',
         name: 'RouterExample',
-        component: () => import('../views/router-example/RouterExample.vue'),
+        component: () => import('../views/Router-Example/RouterExample.vue'),
       },
-      { path: '', redirect: 'comment-doc' }
+      { path: '', redirect: 'Comment-Doc' }
     ]
   },
   { path: '/', redirect: '/base' }
